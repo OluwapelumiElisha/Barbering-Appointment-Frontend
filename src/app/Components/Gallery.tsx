@@ -64,11 +64,7 @@ const Tab = () => {
   ];
 
 
-  // Helper function to extract Video ID from standard YouTube URL
-interface Video {
-  id: number;
-  src: string;
-}
+
 
 const getEmbedUrl = (url: string): string => {
   const videoId = url.split('v=')[1];
