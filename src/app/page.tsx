@@ -19,17 +19,16 @@ import { CarouselDemo } from "./Components/browserSerCarousel";
 import Tab from "./Components/Gallery";
 import TestimonialCarousel from "./Components/Reviews";
 import { useRouter } from "next/navigation";
-// import { useRouter } from "next/router";
 
 const barlow = Barlow({
-  subsets: ["latin"], // Specify subsets as needed
-  weight: ["400", "700"], // Specify weights as needed
-  display: "swap", // Optional: control font-display behavior
+  subsets: ["latin"], 
+  weight: ["400", "700"], 
+  display: "swap", 
 });
 const workSans = Work_Sans({
-  subsets: ["latin"], // Specify subsets as needed
-  weight: ["400", "500", "700"], // Specify weights as needed
-  display: "swap", // Optional: control font-display behavior
+  subsets: ["latin"], 
+  weight: ["400", "500", "700"], 
+  display: "swap", 
 });
 
 
@@ -54,12 +53,12 @@ export default function Home() {
           <div className="flex justify-center items-center gap-6 mt-4">
             <button
               onClick={() => router.push('/Login')}
-              className={`relative z-10 bg-[#DEC7A6] text-black py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
+              className={`relative z-10 bg-[#DEC7A6] text-black py-3 rounded-3xl px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
             >
               BOOK AN APPOINTMENT
             </button>
             <button
-              className={`lg:flex md:flex sm:flex hidden relative z-10 border-2 border-white text-white py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:bg-white hover:text-black transition-all ${barlow.className}`}
+              className={`lg:flex md:flex sm:flex hidden relative z-10 border-2 rounded-3xl border-white text-white py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:bg-white hover:text-black transition-all ${barlow.className}`}
               onClick={() => scrollToElement(P)}
             >
               BROWSER SERVICES
@@ -121,18 +120,18 @@ export default function Home() {
 
           </div>
           <div className="lg:w-[40%] md:w-[40%] sm:w-[100%] w-[100%] p-4 mt-2">
-          <Image src={imgThum} alt="Description" className="" />
+            <Image src={imgThum} alt="Description" className="" />
             {/* <LandingForm /> */}
           </div>
         </div>
         <div className="flex justify-center items-center mt-8">
-              <button
-                className={`relative z-10 bg-[#DEC7A6] text-black py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
-                onClick={() => router.push('/Login')}
-              >
-                BOOK AN APPOINTMENT
-              </button>
-            </div>
+          <button
+            className={`relative z-10 bg-[#DEC7A6] rounded-3xl text-black py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
+            onClick={() => router.push('/Login')}
+          >
+            BOOK AN APPOINTMENT
+          </button>
+        </div>
       </section>
 
       <section className="bg-[#F8F5EF] w-full p-4">
@@ -196,84 +195,84 @@ export default function Home() {
       </section>
 
       <section className="relative bg-cover bg-center hero1 flex flex-col lg:flex-row mt-20 justify-between items-center">
-  {/* Background Image */}
-  <Image
-    src={Gradient}
-    alt="Background Gradient"
-    className="absolute top-0 left-0 w-full h-[300px] sm:h-[400px] object-cover"
-  />
-
-  {/* Content Wrapper */}
-  <div className="relative flex flex-col lg:flex-row justify-between items-center w-full z-10 px-4">
-    {/* Heading Section */}
-    <div className="text-center lg:text-left w-full lg:w-[30%] mt-10 lg:mt-0 lg:-mt-20">
-      <h1
-        className={`${barlow.className} font-extrabold text-white text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] leading-snug`}
-      >
-        MAKE AN APPOINTMENT
-      </h1>
-      <p className="text-white mt-4 text-[14px] sm:text-[16px] md:text-[18px]">
-        Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo.
-      </p>
-
-      {/* Phone Contact */}
-      <div className="flex gap-4 items-center pt-5">
+        {/* Background Image */}
         <Image
-          src={PhoneIconbg}
-          alt="Phone Icon"
-          className="w-9 h-9 flex-shrink-0"
+          src={Gradient}
+          alt="Background Gradient"
+          className="absolute top-0 left-0 w-full h-[300px] sm:h-[400px] object-cover"
         />
-        <div>
-          <p
-            className={`text-white ${barlow.className} font-extrabold text-[14px] sm:text-[16px]`}
-          >
-            GIVE US A CALL
-          </p>
-          <p
-            className={`${barlow.className} font-medium text-white text-[12px] sm:text-[14px]`}
-          >
-            (475) 453 - 3465
-          </p>
-        </div>
-      </div>
 
-      {/* Email Contact */}
-      <div className="flex gap-4 items-center pt-5">
+        {/* Content Wrapper */}
+        <div className="relative flex flex-col lg:flex-row justify-between items-center w-full z-10 px-4">
+          {/* Heading Section */}
+          <div className="text-center lg:text-left w-full lg:w-[30%] mt-10 lg:mt-0 lg:-mt-20">
+            <h1
+              className={`${barlow.className} font-extrabold text-white text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] leading-snug`}
+            >
+              MAKE AN APPOINTMENT
+            </h1>
+            <p className="text-white mt-4 text-[14px] sm:text-[16px] md:text-[18px]">
+              Nulla egestas sapien integer mi fermentum tellus tristique consequat pulvinar sagittis adipiscing egestas purus et mi tempus semper id vel prci eu magna in senectus sit eget justo.
+            </p>
+
+            {/* Phone Contact */}
+            <div className="flex gap-4 items-center pt-5">
+              <Image
+                src={PhoneIconbg}
+                alt="Phone Icon"
+                className="w-9 h-9 flex-shrink-0"
+              />
+              <div>
+                <p
+                  className={`text-white ${barlow.className} font-extrabold text-[14px] sm:text-[16px]`}
+                >
+                  GIVE US A CALL
+                </p>
+                <p
+                  className={`${barlow.className} font-medium text-white text-[12px] sm:text-[14px]`}
+                >
+                  (475) 453 - 3465
+                </p>
+              </div>
+            </div>
+
+            {/* Email Contact */}
+            <div className="flex gap-4 items-center pt-5">
+              <Image
+                src={Messbg}
+                alt="Email Icon"
+                className="w-9 h-9 flex-shrink-0"
+              />
+              <div>
+                <p
+                  className={`text-white ${barlow.className} font-extrabold text-[14px] sm:text-[16px]`}
+                >
+                  SEND US AN EMAIL
+                </p>
+                <p
+                  className={`${barlow.className} font-medium text-white text-[12px] sm:text-[14px]`}
+                >
+                  elishaoguntunde@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Form Section */}
+          <div className="w-full lg:w-[40%] p-6 mt-10 sm:mt-20 lg:mt-0 bg-white shadow-lg rounded-lg z-10">
+            <LandingForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <div>
         <Image
-          src={Messbg}
-          alt="Email Icon"
-          className="w-9 h-9 flex-shrink-0"
+          src={map}
+          alt="Map"
+          className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover"
         />
-        <div>
-          <p
-            className={`text-white ${barlow.className} font-extrabold text-[14px] sm:text-[16px]`}
-          >
-            SEND US AN EMAIL
-          </p>
-          <p
-            className={`${barlow.className} font-medium text-white text-[12px] sm:text-[14px]`}
-          >
-            elishaoguntunde@gmail.com
-          </p>
-        </div>
       </div>
-    </div>
-
-    {/* Form Section */}
-    <div className="w-full lg:w-[40%] p-6 mt-10 sm:mt-20 lg:mt-0 bg-white shadow-lg rounded-lg z-10">
-      <LandingForm />
-    </div>
-  </div>
-</section>
-
-{/* Map Section */}
-<div>
-  <Image
-    src={map}
-    alt="Map"
-    className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover"
-  />
-</div>
 
 
     </main>

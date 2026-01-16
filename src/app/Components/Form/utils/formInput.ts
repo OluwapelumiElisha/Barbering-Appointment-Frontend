@@ -4,34 +4,34 @@ export const FormInput = [
       type: "text",
       placeholder: "Full Name",
       required: true,
-      label: 'A'
+      label: 'Name'
     },
     {
       name: "password",
       type: "password",
       placeholder: "Subject",
       required: true,
-      label: 'B'
+      label: 'Password'
     },
     {
       name: "passwor",
       type: "number",
       placeholder: "Phone Number",
       required: true,
-      label: 'C'
+      label: 'Phone Number'
     },
     {
       name: "email",
       type: "email",
       placeholder: "Email",
       required: true,
-      label: 'D'
+      label: 'Email'
     },
     {
       name: "textarea",
       type: "textarea",
       placeholder: "Please type your message here...",
       required: true,
-      label: 'E'
+      label: 'Message'
     },
   ];

@@ -31,13 +31,49 @@ const Tab = () => {
   ];
 
   const videos = [
-    { id: 1, src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    { id: 2, src: "https://www.w3schools.com/html/movie.mp4" },
-    { id: 3, src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    { id: 4, src: "https://www.w3schools.com/html/movie.mp4" },
-    { id: 5, src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    { id: 6, src: "https://www.w3schools.com/html/movie.mp4" },
+    {
+      id: 1,
+      // Adult Haircut: Cinematic fade transformation
+      src: "https://www.youtube.com/watch?v=3-Ok0rfWtEo"
+    },
+    {
+      id: 2,
+      // Beard Trim: Master barber shaping tutorial
+      src: "https://www.youtube.com/watch?v=1YBneZSblBA"
+    },
+    {
+      id: 3,
+      // Scalp Moisturizing: ASMR Head Massage
+      src: "https://www.youtube.com/watch?v=rSbRLiQiqdY"
+    },
+    {
+      id: 4,
+      // Kids Haircut: Boys haircut tutorial
+      src: "https://www.youtube.com/watch?v=dEd65H0_2R4"
+    },
+    {
+      id: 5,
+      // Neck Shave: Straight razor lineup
+      src: "https://www.youtube.com/watch?v=xm6s1k4F7ww"
+    },
+    {
+      id: 6,
+      // Beard Grooming: Hot towel shave
+      src: "https://www.youtube.com/watch?v=BGAtIbmS42o"
+    },
   ];
+
+
+  // Helper function to extract Video ID from standard YouTube URL
+interface Video {
+  id: number;
+  src: string;
+}
+
+const getEmbedUrl = (url: string): string => {
+  const videoId = url.split('v=')[1];
+  return `https://www.youtube.com/embed/${videoId}`;
+};
 
   return (
     <div className="flex items-center justify-center border-2 rounded-lg w-[90%] m-auto p-4">
@@ -82,26 +118,28 @@ const Tab = () => {
             {videos.map((video) => (
               <div
                 key={video.id}
-                className="shadow-md rounded-lg overflow-hidden bg-gray-100"
+                className="shadow-md rounded-lg overflow-hidden bg-gray-100 aspect-video"
               >
-                <video
-                  controls
-                  className="rounded-lg w-full h-auto"
-                >
-                  <source src={video.src} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {/* Changed from <video> to <iframe> for YouTube support */}
+                <iframe
+                  className="w-full h-full"
+                  src={getEmbedUrl(video.src)}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             ))}
           </div>
           <div className="flex justify-center items-center mt-8">
-              <button
-                className={`relative z-10 bg-[#DEC7A6] text-black py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
-                onClick={() => router.push('/Login')}
-              >
-                BOOK AN APPOINTMENT
-              </button>
-            </div>
+            <button
+              className={`relative z-10 bg-[#DEC7A6] text-black py-3 px-6 font-extrabold text-sm sm:text-base md:text-lg lg:text-xl hover:opacity-90 transition-all !cursor-pointer ${barlow.className}`}
+              onClick={() => router.push('/Login')}
+            >
+              BOOK AN APPOINTMENT
+            </button>
+          </div>
         </TabsContent>
       </Tabs>
     </div>

@@ -9,49 +9,48 @@ import Neck from '../../../public/Neck Shave.jpeg'
 import Beard from '../../../public/Beard Grooming.jpeg'
 
 export function CarouselDemo() {
-  const slideData = [
+ const slideData = [
     {
       title: "Adult Haircut",
-      button: "BOOK AN APPIONMENT",
+      button: "BOOK AN APPOINTMENT",
       src: Adult,
       description: 'Professional haircut designed for adults, featuring precise trimming, shaping, and styling to achieve a clean, polished, and confidence-boosting appearance tailored to you.',
-      price: 540
+      price: 40 
     },
     {
       title: "Beard Trim",
-      button: "BOOK AN APPIONMENT",
+      button: "BOOK AN APPOINTMENT",
       src: BeardTrim,
       description: 'Neatly trims and shapes your beard to maintain a well-groomed look, removing stray hairs and ensuring clean, defined edges for confidence.',
-      price: 540
+      price: 20 
     },
     {
       title: "Scalp Moisturizing",
-      button: "BOOK AN APPIONMENT",
+      button: "BOOK AN APPOINTMENT",
       src: Scalp,
       description: 'Hydrating scalp treatment nourishes, refreshes, and soothes dry skin, promoting healthier hair growth while leaving your scalp feeling soft and rejuvenated.',
-      price: 540
-
+      price: 30 
     },
     {
       title: "Kids Haircut",
-      button: "BOOK AN APPIONMENT",
+      button: "BOOK AN APPOINTMENT",
       description: 'Fun, friendly haircut designed for kids, combining precision and comfort to create stylish, age-appropriate looks that keep children happy and confident.',
       src: Kids,
-      price: 540
+      price: 25 
     },
     {
         title: "Neck Shave",
-        button: "BOOK AN APPIONMENT",
+        button: "BOOK AN APPOINTMENT",
         description: 'Smooth, close neck shave removes unwanted hair, enhancing cleanliness and style. Includes precise edging for a sharp, professional, polished appearance.',
         src: Neck,
-        price: 540
+        price: 10 
       },
       {
         title: "Beard Grooming",
-        button: "BOOK AN APPIONMENT",
+        button: "BOOK AN APPOINTMENT",
         description: 'Comprehensive beard care includes trimming, shaping, and conditioning for a neat, stylish look while promoting softness and healthy beard maintenance.',
         src: Beard,
-        price: 540
+        price: 35 
       },
   ];
   return (
